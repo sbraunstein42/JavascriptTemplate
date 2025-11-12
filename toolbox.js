@@ -12,4 +12,18 @@ export class Toolbox {
         let randomIndex = this.getRandomIndex(array);
         return array[randomIndex];
     }
+
+    shuffleArray(array) {
+        let shuffled = [];
+
+        let howManyTimesToPush = array.length;
+
+        for(let i = 0; i < howManyTimesToPush; i++) {
+            let randomIndex = this.getRandomIndex(array);
+            let removed = array.splice(randomIndex , 1 ) //start position, lenth.
+            
+            shuffled.push(removed[0]);
+        }
+        return shuffled;
+    }
 }
