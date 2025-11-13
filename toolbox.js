@@ -26,4 +26,23 @@ export class Toolbox {
         }
         return shuffled;
     }
+
+    getRandomColor() {
+        let color = "#";
+        let chars = [
+            "0", "1", "2", "3",
+            "4", "5", "6", "7",
+            "8", "9", "a", "b",
+            "c", "d", "e", "f",
+        ];
+
+        for(let i = 0; i < 6; i++) {
+            //i'll be in here six times.
+            color += this.getRandomItem(chars);
+        }
+
+        //like #1afe24
+        return color;
+    }
+
 }
